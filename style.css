@@ -1,0 +1,121 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: ghostwhite;
+    color: gold;
+    text-align: center;
+    padding: 20px;
+
+}
+header h1 {
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Search Section */
+#search-section {
+    margin: 20px auto;
+}
+
+#movie-input {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Result Section */
+#result-section {
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: black;
+}
+.popcorn-loader {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 2rem;
+  margin: 20px auto;
+  pointer-events: none;
+}
+.popcorn-loader span {
+  display: inline-block;
+  animation: popcorn-jump 0.6s infinite ease-in-out;
+}
+.popcorn-loader span:nth-child(2) { animation-delay: 0.12s; }
+.popcorn-loader span:nth-child(3) { animation-delay: 0.24s; }
+@keyframes popcorn-jump {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(-8deg); }
+  100% { transform: translateY(0) rotate(4deg); }
+}
+
+/* optional: center result content and keep spacing when loader shows */
+#result-section {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+}
+
+
+#result-section img {
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+}
+#searchBtn {
+    background: black; /* light beige ticket look */
+    background: linear-gradient(to right, black);
+    border: 2px solid black; /* dark ticket border */
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px 20px 20px 20px; /* ticket tear style */
+    cursor: pointer;
+    box-shadow: 0 4px 8px black(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#searchBtn:hover {
+    transform: scale(1.1);
+    background : black;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#searchBtn:active {
+    transform: scale(0.95);
+}
+:root {
+  --bg-color: ghostwhite;
+  --text-color: gold;
+  --header-color: #222;
+  --input-border: #555;
+  --button-bg: black;
+  --button-text: white;
+  --result-bg: white;
+  --result-text: black;
+  --footer-color: #555;
+}
